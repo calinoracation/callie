@@ -8,6 +8,6 @@ nginx:
 build:
   image: node:latest
   working_dir: /data
-  entrypoint: npm i && npm run build
+  command: npm run build
   volumes:
     - ./:/data
