@@ -1,13 +1,13 @@
 nginx:
   image: nginx:latest
+  working_dir: latest
   ports:
     - "80:80"
     - "443:443"
   volumes:
-    - ./build:/usr/share/nginx/html:ro
+    - ./build:/usr/share/nginx/html
 build:
   image: node:latest
   working_dir: /data
-  command: npm run build
   volumes:
     - ./:/data
