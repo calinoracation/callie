@@ -1,7 +1,7 @@
 // CREDIT: http://codepen.io/deathfang/pen/WxNVoq
 
 // Avoid the compilation overhead, just npm link ../particle-bg
-import * as THREE from 'particle-bg';
+import * as THREE from './three';
 
 const SEPARATION = 100;
 const AMOUNTX = 100;
