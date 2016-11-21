@@ -16,7 +16,7 @@ ul {
 }
 
 #root {
-  margin-top: 100px;
+  margin-top: 20px;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -33,6 +33,18 @@ h2 {
   overflow: hidden;
   position: absolute;
   top: -300px;
+}
+
+.Photo {
+  width: 130px;
+  height: 130px;  
+  margin: 0 auto;
+}
+
+.Photo img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  max-width: 100%;
 }
 
 .App {

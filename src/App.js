@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-import './bg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        <div className="Photo">
+          <img src="/cali-bitmoji.jpg" alt="Callie Riggins" />
+        </div>
+        <div className="App-header">          
           <h2>
             Hi, I&rsquo;m
           </h2>
