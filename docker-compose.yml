@@ -1,6 +1,5 @@
 nginx:
   image: nginx:latest
-  working_dir: latest
   ports:
     - "80:80"
     - "443:443"
