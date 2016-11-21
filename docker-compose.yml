@@ -1,14 +1,12 @@
-version: '2'
-
-services:
-  nginx:
-    image: nginx:latest
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./build:/usr/share/nginx/html:ro
-  build:
-    image: node:latest
-    volumes:
-      - ./:/usr/share/nginx/html
+nginx:
+  image: nginx:latest
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - ./build:/usr/share/nginx/html:ro
+build:
+  image: node:latest
+  command: cd /data && npm i && npm run build
+  volumes:
+    - ./:/data
