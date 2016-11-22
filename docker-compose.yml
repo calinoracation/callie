@@ -5,12 +5,21 @@ nginx:
     - "443:443"
   volumes:
     - ./build:/usr/share/nginx/html
-    - /etc/letsencrypt:/etc/letsencrypt
+    - /etc/letsencrypt:/etc/letsencrypt:ro
 build:
   image: node:latest
   working_dir: /data
   volumes:
     - ./:/data
+renew_certs:
+  image: nginx:latest
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - ./build:/usr/share/nginx/html
+    - /etc/letsencrypt:/etc/letsencrypt
+  command: echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/sources.list && apt-get update && apt-get install certbot -t jessie-backports && certbot certonly --webroot -w /usr/share/nginx/html -d calinoracation.com -d www.calinoracation.com
 
 # Generate certs from LetsEncrypt
 # Inside running nginx, follow steps:
