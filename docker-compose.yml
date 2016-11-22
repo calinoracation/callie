@@ -9,6 +9,7 @@ nginx:
 build:
   image: node:latest
   working_dir: /data
+  command: npm run build
   volumes:
     - ./:/data
 renew_certs:
