@@ -19,7 +19,8 @@ renew_certs:
   volumes:
     - ./build:/usr/share/nginx/html
     - /etc/letsencrypt:/etc/letsencrypt
-  command: export DEBIAN_FRONTEND=noninteractive echo "deb http://httpredir.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/sources.list && apt-get update && apt-get install certbot -t jessie-backports && certbot certonly --webroot -w /usr/share/nginx/html -d calinoracation.com -d www.calinoracation.com
+    - ./renew_certs.sh:/root/renew_certs.sh
+  command: /root/renew_certs.sh
 
 # Generate certs from LetsEncrypt
 # Inside running nginx, follow steps:
