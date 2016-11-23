@@ -6,7 +6,7 @@ nginx:
   volumes:
     - ./build:/usr/share/nginx/html
     - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    - ./cali.config:/etc/nginx/conf.d/cali.config:ro
+    - ./cali.config:/etc/nginx/conf.d/default.conf:ro
     - /etc/letsencrypt:/etc/letsencrypt:ro
     - /etc/ssl/certs:/etc/ssl/certs:ro    
 build:
