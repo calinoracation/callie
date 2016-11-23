@@ -6,6 +6,7 @@ nginx:
   volumes:
     - ./build:/usr/share/nginx/html
     - /etc/letsencrypt:/etc/letsencrypt:ro
+    - /etc/ssl/certs:/etc/ssl/certs:ro
 build:
   image: node:latest
   working_dir: /data
