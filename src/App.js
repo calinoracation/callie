@@ -27,7 +27,7 @@ class App extends Component {
         <ul className="Callout-experience">
           <li className="Callout-entry">
             <div className="Experience-logo">
-              <img alt="Inkling" src="https://inklingstaticgzip.a.ssl.fastly.net/inkling_com/logos/inkling-logo.svg" />
+              <img alt="Inkling" src="/inkling-logo.svg" />
             </div>
             <div className="Experience-detail">
               <p>
@@ -52,44 +52,44 @@ class App extends Component {
         <div className="Fanout">            
           <div className="Logos">
             <div className="Logo node">
-              <img alt="NodeJS" src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" />
+              <img alt="NodeJS" src="/nodejs.png" />
             </div>                  
           </div>          
           <div className="Logos docker">                  
             <div className="Logo docker">
-              <img alt="Docker" src="https://d2mw6vgfxwlz2a.cloudfront.net/2016/Feb/docker_logo-1455828502290.png" />
+              <img alt="Docker" src="/docker.png" />
             </div>
           </div>
           <div className="Logos navy">                  
             <div className="Logo navy">
-              <img alt="US Navy" src="http://www.navy.mil/navydata/questions/NavyEmblem.gif" />
+              <img alt="US Navy" src="/navy.gif" />
             </div>
           </div>        
           <div className="Logos">
             <div className="Logo nginx">
-              <img alt="NGINX" src="https://assets.wp.nginx.com/wp-content/uploads/2015/04/NGINX_logo_rgb-01.png" />
+              <img alt="NGINX" src="/nginx.png" />
             </div>                  
           </div>        
         </div>
         <div className="Fanout row-2">            
           <div className="Logos">
             <div className="Logo redux">
-              <img alt="Redux" src="https://seimys.com/docs/spa-react-redux/imgs/logo-redux.png" />
+              <img alt="Redux" src="/redux.png" />
             </div>
           </div>          
           <div className="Logos docker">                  
             <div className="Logo react">
-              <img alt="React" src="http://builtwithreact.io/img/share-logo.jpg" />
+              <img alt="React" src="/react.jpg" />
             </div>                
           </div>
           <div className="Logos navy"> 
             <div className="Logo aws">
-              <img alt="AWS" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AmazonWebservices_Logo.svg/2000px-AmazonWebservices_Logo.svg.png" />
+              <img alt="AWS" src="/aws.png" />
             </div>                                 
           </div>        
           <div className="Logos">
             <div className="Logo webpack">
-              <img alt="Webpack" src="https://camo.githubusercontent.com/c6ddd9ff94ce584804e95bb55b3f2416dd553843/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313336353838312f313931383337372f34383062326664362d376462632d313165332d386261302d3733346661663331353962382e706e67" />
+              <img alt="Webpack" src="/webpack.png" />
             </div>  
           </div>        
         </div>
@@ -106,7 +106,7 @@ class App extends Component {
           </div>
           <div className="Logos navy">                  
             <div className="Logo babel">
-              <img alt="Bable" src="https://raw.githubusercontent.com/babel/logo/master/babel.png" />
+              <img alt="Bable" src="/babel.png" />
             </div>
           </div>        
           <div className="Logos">
@@ -134,7 +134,7 @@ class App extends Component {
             </li>
             <li className="Contact linkedin">
               <a href="https://www.linkedin.com/in/calinoracation">
-                <img alt="LinkedIn profile" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" />                
+                <img alt="LinkedIn profile" src="/linkedin.png" />                
               </a>
             </li>
           </ul>
