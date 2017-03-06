@@ -1,11 +1,7 @@
+version: "3"
 services:
   nginx:
     image: nginx:latest
-    restart_policy:
-      condition: on-failure
-      delay: 5s
-      max_attempts: 3
-      window: 20s
     ports:
       - "80:80"
       - "443:443"
