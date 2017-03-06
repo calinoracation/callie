@@ -1,6 +1,6 @@
 nginx:
   image: nginx:latest
-  restart_policy: unless-stopped
+  restart_policy: on-failure
   ports:
     - "80:80"
     - "443:443"
