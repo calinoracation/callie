@@ -26,6 +26,7 @@ build:
   command: npm run build
   volumes:
     - ./:/data
+    - ./node_modules:/data/node_modules
 renew_certs:
   image: nginx:latest
   ports:
