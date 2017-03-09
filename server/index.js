@@ -38,9 +38,9 @@ app.post('/rsvp', (req, res) => {
     const message = {
         'FromEmail': 'callie@calinoracation.com',
         'FromName': 'Violet Fun Park Party RSVPs',
-        'Recipients': [{Email: 'calinoracation@gmail.com'}],
+        'Recipients': [{Email: 'violet.sinclaire@gmail.com'}],
         'Subject': `RSVP from ${name}`,
-        'Text-part': `${name} has RSVP'd.\n\nName: ${name}\nEmail: ${email}\nPhone:${phone}`,
+        'Text-part': `${name} has RSVP'd.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`,
     };
 
     logger.info(message);
