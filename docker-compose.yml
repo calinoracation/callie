@@ -1,3 +1,14 @@
+web:
+  image: node:latest
+  environment:
+    - MAIL_USERNAME
+    - MAIL_PASSWORD
+  volumes:
+    - ./server:/var/www/callie
+  working_dir: /var/www/callie
+  ports:
+    - "5000:5000"
+  command: npm start
 nginx:
   image: nginx:latest
   ports:
