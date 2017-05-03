@@ -1,5 +1,6 @@
 web:
   image: node:latest
+  restart: always
   environment:
     - MAIL_USERNAME
     - MAIL_PASSWORD
@@ -11,13 +12,14 @@ web:
   command: npm start
 nginx:
   image: nginx:latest
+  restart: always
   ports:
     - "80:80"
     - "443:443"
   volumes:
     - ./build:/usr/share/nginx/html
     # - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    # - ./cali.config:/etc/nginx/conf.d/default.conf:ro
+    - ./cali.config:/etc/nginx/conf.d/default.conf
     - /etc/letsencrypt:/etc/letsencrypt:ro
     - /etc/ssl/certs:/etc/ssl/certs:ro
 build:
