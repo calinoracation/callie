@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-if (location.hostname === 'violetfunparkparty.com'){
+if (true){
+  console.log('Render violetfunparkparty');
 	const Violet = require('./Violet').default;
 
-    ReactDOM.render(
-      <Violet />,
-      document.getElementById('root')
-    );
+  ReactDOM.render(
+    <Violet />,
+    document.getElementById('root')
+  );
 } else {
-	const App = require('./App').default;
-    ReactDOM.render(
-      <App />,
-      document.getElementById('root')
-    );
+	console.log('Render callie');
+  const App = require('./App').default;
+  ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+  );
 }
