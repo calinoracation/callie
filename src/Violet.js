@@ -68,7 +68,7 @@ const Violet = enhance(({
           <ContentDate>June 11th @ 11am</ContentDate>
           <ContentDescription>
             Cayuga Playground, Outer Mission<br />
-            301 Naglee Ave, San Francisco 94112
+            301 Naglee Ave, San Francisco, CA 94112
           </ContentDescription>
           <form onSubmit={evt => {
             handleSubmit(evt, email);
@@ -83,7 +83,7 @@ const Violet = enhance(({
                 <input 
                   type="email" 
                   name="email"
-                  autocomplete="email"
+                  autoComplete="email"
                   onChange={evt => setEmail(evt.target.value)} 
                   placeholder="What's your email?" 
                 />
@@ -100,10 +100,66 @@ const Violet = enhance(({
           <FunFeature color="#f04c23">Face Painting</FunFeature>
           <FunFeature color="#3b55a5">Food & Drinks</FunFeature>
         </FunFeatures>
+        <Notes>
+          <Thumbtack>
+            <img alt="" src="/thumbtack.svg" />
+          </Thumbtack>
+          <p>Join us at Cayuga Playground for a fun afternoon in the park with your community. We will have free activities for the whole family! There will be a bouncy house, yoga classes, salsa dancing, face painting, cotton candy, popcorn machines, and games for everyone.</p>
+          <p>There will be raffles for a chance to win fun prizes and a trip to summer camp!</p>
+          <p>This event is being hosted as a way to have fun while raising funds to send local kids to an overnight summer camp trip through Tree Frog Treks' award-winning camp programs. Summer Camp tuition is $475 per child and we would like to raise enough money to send at least 10 kiddos to camp this summer!</p>
+          <p>Food and beverages will be available for purchase and 100% of the proceeds will be donated to helping kids go to camp.</p>
+          <p>Please RSVP. We hope to see you there!</p>
+        </Notes>
+        <Notes>
+          <Thumbtack>
+            <img alt="" src="/thumbtack.svg" />
+          </Thumbtack>
+          Contact Violet Sinclaire at <a href="tel:415-713-9420">415-713-9420</a> or email <a href="mailto:violet.sinclaire@gmail.com">violet.sinclaire@gmail.com</a> for more information, or if you are interested in either donating or volunteering at the event.
+        </Notes>
+        <Notes>
+          <Thumbtack>
+            <img alt="" src="/thumbtack.svg" />
+          </Thumbtack>
+          <p>Campers will meet live animals, perform fun experiments, and build leadership and critical thinking skills through adventure in nature with peers and instructors. Campers will be given the opportunity to go to Point Reyes Sky Camp this summer for a 2-night trip. Tree Frog Treks will provide transportation to and from the Point Reyes campsite from their office in Hayes Valley.</p>
+          <p>Visit <a href="http://www.treefrogtreks.com/">http://www.treefrogtreks.com/</a> to learn more about their award-winning programs and what our little campers will do this summer!.</p>
+        </Notes>
       </div>
     </PageWrapper>
   );
 });
+
+const Thumbtack = styled.span`
+  img {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: -10px;    
+  }
+`;
+
+const Notes = styled.div`
+  position: relative;
+  color: #546063;
+  transform: rotate(-1deg);
+  font-family: 'komika_axisregular';
+  box-shadow: 1px 3px 3px 3px rgba(0,0,0,0.4);
+  width: 60%;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-weight: 100;
+  padding: 15px 30px;
+  border-radius: 3px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+
+  a {
+    color: blue;
+  }
+
+  a:visited {
+    color: blue;
+  }
+`;
 
 const media = {
   bravo: (...args) => css`
