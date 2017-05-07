@@ -248,6 +248,7 @@ const PageWrapper = styled.div`
   background: #B3E5FC url(/bg--park-and-sky.png) no-repeat center center fixed;
   background-size: cover;
   overflow: auto;
+  overflow-x: hidden;
   padding-bottom: 200px;
 `;
 
