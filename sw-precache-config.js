@@ -2,6 +2,10 @@ module.exports = {
   stripPrefix: 'build/',
   staticFileGlobs: [
     'build/*.html',
+    'build/*.png',
+    'build/*.svg',
+    'build/*.jpg',
+    'build/komikaaxis_regular_macroman/*.woff',
     'build/manifest.json',
     'build/static/**/!(*map*)'
   ],
