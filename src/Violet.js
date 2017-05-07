@@ -379,7 +379,7 @@ const ContentDate = styled.h2`
   margin: -10px 0 0 0;
 
   ${ media.bravo`
-    font-size: 4vw;
+    font-size: 5vw;
     text-shadow: 1.5px 1.5px 0 rgba(255, 255, 255, 0.8);
     margin-top: 0;
   ` }
