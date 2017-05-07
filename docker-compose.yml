@@ -18,9 +18,8 @@ nginx:
     - "443:443"
   volumes:
     - ./build:/usr/share/nginx/html
-    # - ./nginx.conf:/etc/nginx/nginx.conf:ro
     - ./cali.config:/etc/nginx/conf.d/default.conf
-    - /etc/letsencrypt:/etc/letsencrypt:ro
+    - /etc/letsencrypt:/etc/letsencrypt
     - /etc/ssl/certs:/etc/ssl/certs:ro
 build:
   image: node:latest
@@ -36,8 +35,8 @@ renew_certs:
     - "443:443"
   volumes:
     - ./build:/usr/share/nginx/html
+    - ./cali.config:/etc/nginx/conf.d/default.conf
     - /etc/letsencrypt:/etc/letsencrypt
-    - ./renew_certs.sh:/root/renew_certs.sh
   command: /root/renew_certs.sh
 
 # Generate certs from LetsEncrypt
