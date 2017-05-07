@@ -116,28 +116,44 @@ const media = {
 const FlyBirdyFlyLow = keyframes`
   to {
     opacity: 0;
-    transform: translate(-220px, 120px) scale(0.5, -0.2);
+    transform: translate(-500px, 120px) scale(0.5, -0.2);
   }
 `;
 
 const FlyBirdyFlyHigh = keyframes`
   to {
     opacity: 0;
-    transform: translate(-220px, -20px) scale(0.5, -0.5);
+    transform: translate(-500px, -20px) scale(0.5, -0.3);
   }
 `;
 
 const FlyBirdyFlyRight = keyframes`
-  to {
+  0% {
     opacity: 0;
-    transform: translate(190px, 10px) scale(-1, -0.5);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(500px, 130px) scale(0.5, -0.2);
   }
 `;
 
 const FlyBirdyFlyRightHigh = keyframes`
-  to {
+  0% {
     opacity: 0;
-    transform: translate(190px, -120px) scale(-1, -0.5);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(500px, -120px) scale(0.5, -0.2);
   }
 `;
 
@@ -221,20 +237,24 @@ const LeftBirds = styled.div`
   position: absolute;
   transform: translate(90px, 20px) ${props => props.high ? 'scale(1)' : 'scale(0.8)'};
   animation: ${props => props.high ? FlyBirdyFlyHigh : FlyBirdyFlyLow} 4s cubic-bezier(0.420, 0.000, 1.000, 1.000) infinite;
-  animation-delay: ${props => props.high ? 0 : 2.3}s;
+  animation-delay: ${props => props.high ? 1 : 2}s;
+  animation-iteration-count: infinite;
 `;
 
 const RightBirds = styled.div`
   width: 350px;
   min-height: 150px;
-  background-image: url(/left-birds.png);
+  background-image: url(/right-birds.png);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
   position: absolute;
-  transform: translate(-90px, 10px) ${props => props.high ? 'scaleX(-1)' : 'scaleX(-1)'};
-  animation: ${props => props.high ? FlyBirdyFlyRightHigh : FlyBirdyFlyRight} 4s cubic-bezier(0.420, 0.000, 1.000, 1.000) infinite;
-  animation-delay: ${props => props.high ? 0 : 2}s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: translate(90px, 10px) ${props => props.high ? 'scale(1)' : 'scale(0.8)'};
+  animation: ${props => props.high ? FlyBirdyFlyRightHigh : FlyBirdyFlyRight} 3.5s cubic-bezier(0.420, 0.000, 1.000, 1.000) infinite;
+  animation-delay: ${props => props.high ? 0.5 : 1.5}s;
+  animation-iteration-count: infinite;
 `;
 
 const FunFeature = styled.li`
