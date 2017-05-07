@@ -96,7 +96,7 @@ const Violet = enhance(({
         <FunFeatures>
           <FunFeature color="#f04c23">Free Yoga Class</FunFeature>
           <FunFeature color="#3b55a5">Free Salsa Class</FunFeature>
-          <FunFeature color="#61c5b8">Free Bouncy House</FunFeature>
+          <FunFeature color="#61c5b8">Bouncy House</FunFeature>
           <FunFeature color="#f04c23">Face Painting</FunFeature>
           <FunFeature color="#3b55a5">Food & Drinks</FunFeature>
         </FunFeatures>
