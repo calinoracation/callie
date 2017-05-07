@@ -15,6 +15,6 @@ if (location.hostname !== 'calinoracation.com'){
 	const App = require('./App').default;
   ReactDOM.render(
     <App />,
-    document.getElementById('root')
+    document.getElementById('rootCallie')
   );
 }
