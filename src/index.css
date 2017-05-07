@@ -3,3 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('/title-webfont.eot');
+    src: url('/title-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/title-webfont.woff') format('woff'),
+         url('/title-webfont.ttf') format('truetype'),
+         url('/title-webfont.svg#komika_axisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
