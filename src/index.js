@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-if (true){
+if (location.hostname !== 'calinoracation.com'){
   console.log('Render violetfunparkparty');
 	const Violet = require('./Violet').default;
 
@@ -12,8 +12,7 @@ if (true){
     document.getElementById('root')
   );
 } else {
-	console.log('Render callie');
-  const App = require('./App').default;
+	const App = require('./App').default;
   ReactDOM.render(
     <App />,
     document.getElementById('root')

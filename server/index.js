@@ -31,16 +31,16 @@ app.get('/', (req, res) => {
 });
 
 app.post('/rsvp', (req, res) => {
-    const {name, email, phone} = req.body;
+    const { email } = req.body;
 
-    console.log(`${name} has RSVP'd. Send an email to ${email} or call @ ${phone}.`);
+    console.log(`${email} has RSVP'd.`);
 
     const message = {
         'FromEmail': 'callie@calinoracation.com',
         'FromName': 'Violet Fun Park Party RSVPs',
         'Recipients': [{Email: 'violet.sinclaire@gmail.com'}],
-        'Subject': `RSVP from ${name}`,
-        'Text-part': `${name} has RSVP'd.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`,
+        'Subject': `RSVP from ${email}`,
+        'Text-part': `${email} has RSVP'd.`,
     };
 
     logger.info(message);

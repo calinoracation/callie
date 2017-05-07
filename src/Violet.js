@@ -3,37 +3,45 @@ import styled, { css, keyframes } from 'styled-components';
 import { compose, withState } from 'recompose';
 import { Helmet } from 'react-helmet';
 
-// const apiHost = process.env.NODE_ENV === 'production' ?
-//   'http://violetfunparkparty.com:5000' :
-//   'http://localhost:5000';
+const apiHost = process.env.NODE_ENV === 'production' ?
+  'http://violetfunparkparty.com:5000' :
+  'http://localhost:5000';
 
-// function handleSubmit(event, name, email, phone){
-//   evt.preventDefault();
+function handleSubmit(evt, email){
+  evt.preventDefault();
 
-//   console.log(`${name} has RSVP'd. Send an email to ${email} or call @ ${phone}.`);
+  console.log(`${name} has RSVP'd.`);
 
-//   return fetch(`${apiHost}/rsvp`, {
-//     method: `post`,
-//     mode: `cors`,
-//     headers: {
-//       'Content-Type': `application/json`,
-//       'Accept': `application/json`,
-//     },
-//     body: JSON.stringify({name, email, phone}),
-//   });
-// }
+  return fetch(`${apiHost}/rsvp`, {
+    method: `post`,
+    mode: `cors`,
+    headers: {
+      'Content-Type': `application/json`,
+      'Accept': `application/json`,
+    },
+    body: JSON.stringify({email}),
+  });
+}
 
 const enhance = compose(
   withState('disabled', 'setDisabled', false),
   withState('hasSent', 'setHasSent', false),
+  withState('email', 'setEmail', ''),
 );
 
-const Violet = enhance(({ disabled, setDisabled }) => {
+const Violet = enhance(({ 
+  disabled, 
+  setDisabled, 
+  hasSent, 
+  setHasSent,
+  email,
+  setEmail, 
+}) => {
   return (
     <PageWrapper>
       <Helmet>
           <title>Violet's Fun-Raising Neighborhood Party</title>
-      </Helmet>      
+      </Helmet>  
       <div style={{
         display: 'flex',
         flexDirection: 'column',
@@ -62,10 +70,26 @@ const Violet = enhance(({ disabled, setDisabled }) => {
             Cayuga Playground, Outer Mission<br />
             301 Naglee Ave, San Francisco 94112
           </ContentDescription>
-          <RsvpWrapper>
-            <input type="text" placeholder="What's your email?" />
-            <input type="submit" value="RSVP" />
-          </RsvpWrapper>
+          <form onSubmit={evt => {
+            handleSubmit(evt, email);
+            setHasSent(true);
+          }}>
+            <RsvpWrapper>     
+            {hasSent && (
+              <Thanks>Thanks!</Thanks>
+            )}
+            {!hasSent && (
+              <span style={{display: 'flex'}}>
+                <input 
+                  type="text" 
+                  onChange={evt => setEmail(evt.target.value)} 
+                  placeholder="What's your email?" 
+                />
+                <input type="submit" value="RSVP" />
+              </span>
+            )}                 
+            </RsvpWrapper>
+          </form>
         </ContentBox>
         <FunFeatures>
           <FunFeature color="#f04c23">Free Yoga Class</FunFeature>
@@ -75,12 +99,6 @@ const Violet = enhance(({ disabled, setDisabled }) => {
           <FunFeature color="#3b55a5">Food & Drinks</FunFeature>
         </FunFeatures>
       </div>
-      <Thanks>
-        <div className="thanks">
-          <h2>Thank you for RSVP'ing, see you on June 11th! <br />Please check your email for any changes or updates</h2>
-          <button className="btn--dismiss" onClick={() => setDisabled(true)}>Close</button>
-        </div>
-      </Thanks>
     </PageWrapper>
   );
 });
@@ -121,8 +139,30 @@ const FlyBirdyFlyRightHigh = keyframes`
   }
 `;
 
+const ThanksPulse = keyframes`
+  to {
+    transform: scale(1.2) rotate(6deg);
+    text-shadow:
+       -4px -4px 0 #fae714,  
+        4px -4px 0 #fae714,
+        -4px 4px 0 #fae714,
+         4px 4px 0 #fae714;
+  }
+`;
+
 const Thanks = styled.div`
-  display: none;
+  font-family: 'komika_axisregular';
+  font-size: 22px;  
+  animation: ${ThanksPulse} 0.8s cubic-bezier(0.420, 0.000, 1.000, 1.000) infinite;
+  animation-direction: alternate;
+  transform: rotate(-6deg);
+
+  color: #fff;
+  text-shadow:
+     -2px -2px 0 #f04c23,  
+      2px -2px 0 #f04c23,
+      -2px 2px 0 #f04c23,
+       2px 2px 0 #f04c23;
 `;
 
 const PageWrapper = styled.div`
