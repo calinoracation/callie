@@ -121,7 +121,7 @@ const Violet = enhance(({
             <img alt="" src="/thumbtack.svg" />
           </Thumbtack>
           <p>Campers will meet live animals, perform fun experiments, and build leadership and critical thinking skills through adventure in nature with peers and instructors. Campers will be given the opportunity to go to Point Reyes Sky Camp this summer for a 2-night trip. Tree Frog Treks will provide transportation to and from the Point Reyes campsite from their office in Hayes Valley.</p>
-          <p>Visit <a href="http://www.treefrogtreks.com/">http://www.treefrogtreks.com/</a> to learn more about their award-winning programs and what our little campers will do this summer!.</p>
+          <p>Visit <a href="http://www.treefrogtreks.com/">http://www.treefrogtreks.com/</a> to learn more about their award-winning programs and what our little campers will do this summer!</p>
         </Notes>
       </div>
     </PageWrapper>
