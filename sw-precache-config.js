@@ -5,6 +5,7 @@ module.exports = {
     'build/*.png',
     'build/*.svg',
     'build/*.jpg',
+    'build/*.woff',
     'build/komikaaxis_regular_macroman/*.woff',
     'build/manifest.json',
     'build/static/**/!(*map*)'
