@@ -81,7 +81,9 @@ const Violet = enhance(({
             {!hasSent && (
               <span style={{display: 'flex'}}>
                 <input 
-                  type="text" 
+                  type="email" 
+                  name="email"
+                  autocomplete="email"
                   onChange={evt => setEmail(evt.target.value)} 
                   placeholder="What's your email?" 
                 />
@@ -342,7 +344,7 @@ const RsvpWrapper = styled.div`
     margin: 0 0 0 -5px;
   }
 
-  input[type="text"] {
+  input[type="email"] {
     font-family: 'komika_axisregular';
     font-size: 13px;
     border: 3px solid #fff;
