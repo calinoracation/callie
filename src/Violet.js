@@ -184,7 +184,7 @@ const Logo = styled.header`
   position: relative;
 
   img {
-    height: 25vh;
+    height: 170px;
     z-index: 10;
   }
 `;
