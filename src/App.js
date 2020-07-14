@@ -28,7 +28,7 @@ class App extends Component {
         <li className="Callout-entry">            
             <div className="Experience-detail">
               <p>
-                I work as a front-end specialist at Airbnb, commonly on frontend performance, progressive web app features like push notifications, installability to name a few. I'm also very passionate about accessibility and inclusive design.
+                I work as a front-end specialist at Airbnb, commonly on frontend performance, progressive web app features like push notifications, installability and high performance image serving to name a few. I'm also very passionate about accessibility and inclusive design.
               </p>
             </div>
             <div className="Experience-logo">
