@@ -25,27 +25,34 @@ class App extends Component {
           </svg>
         </h3>        
         <ul className="Callout-experience">
-          <li className="Callout-entry">
-            <div className="Experience-logo">
-              <img alt="Inkling" src="/inkling-logo.svg" />
+        <li className="Callout-entry">            
+            <div className="Experience-detail">
+              <p>
+                I work as a front-end specialist at Airbnb, commonly on frontend performance, progressive web app features like push notifications, installability to name a few. I'm also very passionate about accessibility and inclusive design.
+              </p>
             </div>
+            <div className="Experience-logo">
+              <img alt="Airbnb Logo" src="https://airbnb-photos.s3.amazonaws.com/pictures/webappmanifest/icons/original/5ab000fc-65e6-4ef1-a65a-792b89e531ba.png" />
+            </div>
+          </li>          
+          <li className="Callout-entry">            
             <div className="Experience-detail">
               <p>
                 On any given day you can find me working on our Node / React based sites, debugging all the things, and working with our team on planning new features. Amazon AWS, Docker, Node & Modern Javascript/Tooling are a few things I really enjoy.
               </p>
             </div>
-            <svg width="36px" height="124px" className="Connector-2" viewBox="366 244 36 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                <path d="M369,247 C369,247 412.243778,305.978516 382.637322,364.957031" id="curve" stroke="#FFFFFF" strokeWidth="5" fill="none" transform="translate(381.000000, 305.978516) scale(-1, 1) translate(-381.000000, -305.978516) "></path>
-            </svg>
+            <div className="Experience-logo">
+              <img alt="Inkling Logo" src="/inkling-logo.svg" />
+            </div>
           </li>
-          <li className="Callout-entry alternate">            
-            <div className="Experience-detail alternate">
+          <li className="Callout-entry">            
+            <div className="Experience-detail">
               <p>
                 Based out of Atlanta, Georgia, for over 7 years I worked on a diverse set of projects. Some of the things I worked with a lot are C#, XAML, Node and AngularJS, with a touch of Sketch and a ton of debugging.
               </p>
             </div>
-            <div className="Experience-logo alternate">
-              <img alt="Turner" src="/turner.png" />
+            <div className="Experience-logo">
+              <img alt="Turner Logo" src="/turner.png" />
             </div>
           </li>
         </ul>

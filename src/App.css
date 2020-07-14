@@ -419,9 +419,9 @@ h2 {
 }
 
 .Experience-logo {
-  width: 100px;
+  width: 120px;
   min-width: 100px;
-  height: 100px;
+  height: 120px;
   border-radius: 50%;
   margin-top: 0;
   border: 3px solid #BBDEFB;  
@@ -432,6 +432,7 @@ h2 {
   align-items: center;
   padding: 15px;
   position: relative;
+  left: -75px;
 }
 
 .Experience-logo:before {
@@ -445,21 +446,8 @@ h2 {
   right: 0;
 }
 
-.Experience-logo.alternate:before {
-  border-color: #FFECB3;
-}
-
-.Experience-logo.alternate {
-  margin-top: 95px;
-  border: 3px solid #FFC107;  
-  background: #fff;
-  width: 110px;
-  min-width: 110px;
-  height: 110px;
-}
-
 .Experience-logo img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .Experience-logo.alternate img {
@@ -471,6 +459,7 @@ h2 {
   display: flex;
   padding: 0 40px;
   position: relative;
+  margin: 10px 0 20px 0;
 }
 
 .Callout-entry.alternate {
@@ -487,12 +476,13 @@ h2 {
   display: flex;
   flex: 1;
   border: 3px solid #B3E5FC;
-  border-width: 3px 3px 3px 0;
-  border-radius: 0 20px 50px 0;
-  margin-left: -70px;
-  height: 130px;
-  max-height: 136px;
-  padding-left: 70px;
+  border-width: 3px 0 3px 0;
+  border-radius: 0px;
+  margin-left: -50px;
+  height: 150px;
+  max-height: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .Experience-detail.alternate {
@@ -512,7 +502,7 @@ h2 {
   font-size: calc(1.3vw + 1.3vh);
   flex: 1;
   overflow: hidden;
-  margin: 5px 0;
+  margin: 5px 45px 5px 0;
   text-align: left;
   color: #B2DFDB;
   display: flex;
@@ -602,6 +592,10 @@ h2 {
     margin: 0 0 40px 0;   
     padding: 5px;
   }  
+
+  .Experience-logo {
+    left: 0;
+  }
 
   .Experience-logo.alternate {
     margin-top: 50px;
